@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!-- The reset css. -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <title>Trivia Game</title>
+    <title>Who Dares to be a Millionaire?</title>
     <!-- Added a link to Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Then my style sheet. -->
@@ -22,14 +22,57 @@ If the player chooses the wrong answer, tell the player they selected the wrong 
 
 On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page). -->
 
+<!-- Layout: Based on the example, need a header that doesn't change, but a game space that keeps updating. A countdown timer that keeps ticking as well.
+Good amount of space for the question, and then four choices. I do enjoy Bootstrap cards, they are very useful. Title remains through to the end. -->
 
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-0 col-md-2"></div>
+        <div class="col-12 col-md-8 text-center">
+            WHO DARES TO BE A MILLIONAIRE?
+        </div>
+    </div>
+</div>
+<div class="container timer">
+    <div class="row">
+        <div class="col-0 col-md-4"></div>
+        <div class="col-12 col-md-4 text-center" id="timeSpace">
+            Time remaining: <span id="time">15</span> seconds
+        </div>
+    </div>
+</div>
+<div class="container question">
+    <div class="row">
+        <div class="col-0 col-md-3"></div>
+        <div class="col-12 col-md-6 text-center" id="clueSpace">
+            Space for the question and-or results.
+        </div>
+    </div>
+</div>
+<div class="container answers">
+    <div class="row">
+        <div class="col-0 col-md-2"></div>
+        <button class="col-6 col-md-4 text-center" id="ansOne">
+            First Answer
+        </button>
+        <button class="col-6 col-md-4 text-center" id="ansTwo">
+            Second Answer
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-0 col-md-2"></div>
+        <button class="col-6 col-md-4 text-center" id="ansThr">
+            Third Answer
+        </button>
+        <button class="col-6 col-md-4 text-center" id="ansFou">
+            Fourth Answer
+        </button>
+    </div>
+</div>
 
 <!-- Plug in the jQuery and the javascript. -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    $(document).ready(function() {})
-    </script>
+    $(document).ready(function() {})</script>
 <script src="assets/javascript/app.js"></script>
 </body>
 </html>
