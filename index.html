@@ -25,7 +25,7 @@ On the final screen, show the number of correct answers, incorrect answers, and 
 <!-- Layout: Based on the example, need a header that doesn't change, but a game space that keeps updating. A countdown timer that keeps ticking as well.
 Good amount of space for the question, and then four choices. I do enjoy Bootstrap cards, they are very useful. Title remains through to the end. -->
 
-<div class="container">
+<div class="container title">
     <div class="row">
         <div class="col-0 col-md-2"></div>
         <div class="col-12 col-md-8 text-center">
@@ -33,25 +33,25 @@ Good amount of space for the question, and then four choices. I do enjoy Bootstr
         </div>
     </div>
 </div>
-<div class="container timer">
+<div class="container  timer">
     <div class="row">
-        <div class="col-0 col-md-4"></div>
-        <div class="col-12 col-md-4 text-center" id="timeSpace">
+        <div class="col-0 col-md-3"></div>
+        <div class="card col-12 col-md-6 text-center" id="timeSpace">
             Time remaining: <span id="time">15</span> seconds
         </div>
     </div>
 </div>
-<div class="container question">
+<div class="container  question">
     <div class="row">
         <div class="col-0 col-md-3"></div>
-        <div class="col-12 col-md-6 text-center" id="clueSpace">
+        <div class="card col-12 col-md-6 text-center" id="clueSpace">
             Space for the question and-or results.
         </div>
     </div>
 </div>
 <div class="container answers">
-    <div class="row">
-        <div class="col-0 col-md-2"></div>
+    <div class="row" id="topRow">
+        <div class="col-0 col-md-2" id="firstSet"></div>
         <button class="col-6 col-md-4 text-center" id="ansOne">
             First Answer
         </button>
@@ -59,8 +59,8 @@ Good amount of space for the question, and then four choices. I do enjoy Bootstr
             Second Answer
         </button>
     </div>
-    <div class="row">
-        <div class="col-0 col-md-2"></div>
+    <div class="row" id="bottomRow">
+        <div class="col-0 col-md-2" id="secondSet"></div>
         <button class="col-6 col-md-4 text-center" id="ansThr">
             Third Answer
         </button>
